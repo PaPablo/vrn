@@ -1,8 +1,11 @@
 # Set the base image
-FROM ubuntu:16.04
+FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
 # Dockerfile author / maintainer 
 MAINTAINER Pablo Toledo Margalef <pabloatm980@gmail.com>
 
+
+ENV TZ=America/Argentina/Ushuaia
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #Run installation
 RUN apt-get update -qy
