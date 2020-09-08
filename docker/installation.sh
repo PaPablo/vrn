@@ -2,7 +2,7 @@
 
 echo "INSTALLING OpenBLAS"
 
-cd /root/openblas ~/OpenBLAS
+cd ~/OpenBLAS
 make NO_AFFINITY=1 USE_OPENMP=1
 make install
 
