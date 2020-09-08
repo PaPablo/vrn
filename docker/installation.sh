@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "INSTALLING OpenBLAS"
+
+cd /root/openblas ~/OpenBLAS
+make NO_AFFINITY=1 USE_OPENMP=1
+make install
+
 echo "INSTALLING TORCH"
 
 cd /root/torch; bash install-deps;

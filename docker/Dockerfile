@@ -17,6 +17,7 @@ RUN python ~/pip/install.py
 RUN rm -r ~/pip
 RUN pip install visvis imageio==1 dlib
 
+RUN git clone https://github.com/xianyi/OpenBLAS.git ~/OpenBLAS --recursive
 RUN git clone https://github.com/nagadomi/distro.git ~/torch --recursive
 RUN git clone https://github.com/1adrianb/thpp.git ~/thpp
 RUN git clone https://github.com/facebook/fblualib.git ~/fblualib
