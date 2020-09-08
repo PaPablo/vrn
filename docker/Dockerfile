@@ -21,7 +21,7 @@ RUN git clone https://github.com/xianyi/OpenBLAS.git ~/OpenBLAS --recursive
 RUN git clone https://github.com/nagadomi/distro.git ~/torch --recursive
 RUN git clone https://github.com/1adrianb/thpp.git ~/thpp
 RUN git clone https://github.com/facebook/fblualib.git ~/fblualib
-RUN git clone --recursive https://github.com/papablo/vrn ~/vrn
+RUN git clone --recursive --branch dockerize https://github.com/papablo/vrn ~/vrn
 
 #Add installation script
 COPY installation.sh /root/installation.sh
